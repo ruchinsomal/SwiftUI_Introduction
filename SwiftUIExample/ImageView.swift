@@ -10,7 +10,9 @@ import SwiftUI
 
 struct ImageView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image("code").resizable()
+            .aspectRatio(1, contentMode: .fit)
+            .clipShape(Circle()).overlay(Circle().stroke(Color.gray, lineWidth: 8)).shadow(radius: 10).padding()
     }
 }
 
